@@ -1,0 +1,16 @@
+usuarios tandas
+
+monica.estrada
+s4l4m4nc42022$
+
+miguel.estrada
+m1gu3l$
+
+
+{
+  
+  "usuario": "miguel.estrada",
+  "password": "$2a$10$aTQuRIC2dO9cifeXC7uPN./wM5ZApgjgt0K6cUN3T/KO1IxtpH5nC",
+  "estatus": true,
+  "__v": 0
+}
