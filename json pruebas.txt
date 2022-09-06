@@ -1,0 +1,16 @@
+login
+{
+    "usuario": "miguel.estrada",
+    "password":"m1gu3l$"
+}
+
+
+tandas
+{
+    "nombre": "Tanda Semanal AGO-DIC 2022",
+    "fechaInicio": "2022/08/15",
+    "totalNumeros": 19,
+    "periodoEntrega": 7,
+    "fechaFin": "2022/12/19",
+    "activa": true
+}

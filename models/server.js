@@ -9,6 +9,7 @@ class Server {
         this.usuariosPath = '/api/usuarios';
         this.authPath = '/api/auth';
         this.tandaPath = '/api/tandas';
+        this.numeroPath = '/api/numeros';
 
 
         //Conectar a base de datos
@@ -40,6 +41,7 @@ class Server {
         this.app.use(this.authPath, require('../routes/auth'));
         this.app.use(this.usuariosPath, require('../routes/usuarios'));
         this.app.use(this.tandaPath, require('../routes/tandas'));
+        this.app.use(this.numeroPath, require('../routes/numerotanda'));
     }
 
     listen() {
