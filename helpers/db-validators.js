@@ -1,5 +1,6 @@
 const Usuario = require('../models/usuario');
 const Tanda = require('../models/tanda');
+const numeroTanda = require('../models/numeroTanda');
 
 
 const existeUsuarioPorId = async(id) => {
@@ -15,8 +16,16 @@ const existeTandaporNombre = async(nombre) => {
         throw new Error(`El nombre:  ${nombre} ya existe, intente con otro`);
     }
 };
+const existeNumeroPorId = async(id) => {
+    const existeNumero = await numeroTanda.findById(id);
+    if (!existeNumero) {
+        throw new Error(`El id no existe:  ${id} `);
+    }
+};
+
 
 module.exports = {
     existeUsuarioPorId,
-    existeTandaporNombre
+    existeTandaporNombre,
+    existeNumeroPorId
 }
