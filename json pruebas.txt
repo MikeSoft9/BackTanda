@@ -10,7 +10,7 @@ tandas
     "nombre": "Tanda Semanal AGO-DIC 2022",
     "fechaInicio": "2022/08/15",
     "totalNumeros": 19,
-    "periodoEntrega": 7,
+    "periodoEntrega": 8,
     "fechaFin": "2022/12/19",
     "activa": true
 }
