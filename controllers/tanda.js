@@ -29,8 +29,12 @@ const tandaGet = async(req = request, res = response) => {
 };
 
 const tandaPost = async(req = request, res = response) => {
+    var realizado = false;
     const { nombre, fechaInicio, totalNumeros, periodoEntrega, fechaFin, activa } = req.body;
     const tanda = new Tanda({ nombre, fechaInicio, totalNumeros, periodoEntrega, fechaFin, activa });
+
+    await numeroTanda.updateMany({ activa: false });
+
     await tanda.save();
 
     var i = 0;
@@ -48,17 +52,10 @@ const tandaPost = async(req = request, res = response) => {
         await numerotanda.save();
 
         fecha.setDate(fecha.getDate() + periodoEntrega);
-        console.log(fecha);
+        realizado = true;
     }
 
-    res.json({
-        nombre,
-        fechaInicio,
-        totalNumeros,
-        periodoEntrega,
-        fechaFin,
-        activa
-    })
+    res.json(realizado)
 };
 
 
